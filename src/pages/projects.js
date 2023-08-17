@@ -7,7 +7,8 @@ import Image from 'next/image';
 import { GithubIcon } from '@/components/icons';
 import { motion } from 'framer-motion';
 import project1 from '../../public/images/projects/portfolio-cover-image.png';
-import articles from './articles';
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({
 	title,
@@ -26,7 +27,13 @@ const FeaturedProject = ({
 				target={'_blank'}
 				className='w-1/2 cursor-pointer overflow-hidden rounded-lg '
 			>
-				<Image src={image} alt={title} className='w-full h-auto' />
+				<FramerImage
+					src={image}
+					alt={title}
+					className='w-full h-auto'
+					whileHover={{ scale: 1.05 }}
+					transition={{ duration: 0.2 }}
+				/>
 			</Link>
 
 			<div className='w-1/2 flex flex-col items-start justify-between pl-6'>
