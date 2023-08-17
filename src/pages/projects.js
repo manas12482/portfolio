@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GithubIcon } from '@/components/icons';
 import { motion } from 'framer-motion';
-import project1 from '../../public/images/projects/portfolio-cover-image.jpg';
+import project1 from '../../public/images/projects/portfolio-cover-image.png';
 import articles from './articles';
 
 const FeaturedProject = ({
