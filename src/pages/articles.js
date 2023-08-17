@@ -11,8 +11,8 @@ const FramerImage = motion(Image);
 
 const FeaturedArticle = ({ title, description, link, image, time }) => {
 	return (
-		<motion.li className='cursor-pointer col-span-1 w-full p-4 bg-light border-solid border border-dark rounded-2xl relative' >
-			<div className='absolute top-0 left-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl' />
+		<motion.li className='cursor-pointer col-span-1 w-full p-4 bg-light dark:bg-dark border-solid border border-dark dark:border-light rounded-2xl relative'>
+			<div className='absolute top-0 left-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl' />
 			<Link
 				href={link}
 				target={'_blank'}
@@ -27,12 +27,12 @@ const FeaturedArticle = ({ title, description, link, image, time }) => {
 				/>
 			</Link>
 			<Link href={link} target={'_blank'}>
-				<h2 className='capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4'>
+				<h2 className='capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 text-dark dark:text-light'>
 					{title}
 				</h2>
 			</Link>
-			<p className='text-sm mb-2'>{description}</p>
-			<span className='text-primary font-semibold'>{time} read</span>
+			<p className='text-sm mb-2 text-dark dark:text-light'>{description}</p>
+			<span className='text-primary dark:text-primaryDark font-semibold'>{time} read</span>
 		</motion.li>
 	);
 };
@@ -59,18 +59,20 @@ const MovingImg = ({ title, image, link }) => {
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
 		>
-			<h2 className='capitalize text-xl font-semibold hover:underline'>
+			<h2 className='capitalize text-xl font-semibold hover:underline text-dark dark:text-light'>
 				{title}
 			</h2>
 			<FramerImage
 				src={image}
 				alt={title}
 				className='z-10 w-96 h-auto hidden absolute rounded-lg'
-        ref={imgRef}
-        style={{x,y}}
-        initial={{opacity:0}}
-        whileInView={{opacity:1}}
-        transition={{duration:0.5}}
+				ref={imgRef}
+				style={{ x, y }}
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 0.5 }}
+				// priority
+				sizes='(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 33vw'
 			/>
 		</Link>
 	);
@@ -79,13 +81,13 @@ const MovingImg = ({ title, image, link }) => {
 const Article = ({ title, link, image, date }) => {
 	return (
 		<motion.li
-			className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 cursor-pointer'
+			className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark text-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light border-r-4 border-b-4 cursor-pointer'
 			initial={{ y: 200 }}
 			whileInView={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
 			viewport={{ once: true }}
 		>
 			<MovingImg title={title} image={image} link={link} />
-			<span className='text-primary font-semibold pl-4'>{date}</span>
+			<span className='text-primary dark:text-primaryDark font-semibold pl-4'>{date}</span>
 		</motion.li>
 	);
 };
@@ -117,7 +119,7 @@ const articles = () => {
 							time='9 Min'
 						/>
 					</ul>
-					<h2 className='font-bold text-4xl w-full text-center my-16 mt-32'>
+					<h2 className='font-bold text-4xl w-full text-center my-16 mt-32c text-dark dark:text-light'>
 						All Articles
 					</h2>
 					<ul>
