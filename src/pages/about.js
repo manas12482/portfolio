@@ -50,7 +50,7 @@ const about = () => {
 								Crafting Digital Excellence: Suyash&apos;s Developer Journey
 							</h2>
 							<p className='font-medium my-4'>
-								Hi, I&apos;m Suyash Mishra, a versatile professional excelling
+								- Hi, I&apos;m Suyash Mishra, a versatile professional excelling
 								in software development, web design, and data analysis. With a
 								passion for creating seamless digital experiences, I bring a
 								unique blend of skills to every project.
@@ -71,8 +71,8 @@ const about = () => {
 								your next project.
 							</p>
 						</div>
-						<div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark/75 dark:border-light'>
-							<div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light ' />
+						<div className='col-span-3 relative h-max rounded-2xl  border-2 border-solid border-dark bg-light p-8 dark:bg-dark/75 dark:border-light'>
+							<div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-tl-2xl rounded-[2rem] bg-dark dark:bg-light ' />
 							<Image
 								src={profilePic}
 								alt='Suyash Mishra'
