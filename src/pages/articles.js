@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import article1 from '../../public/images/projects/portfolio-cover-image.png';
 import { motion, useMotionValue } from 'framer-motion';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
 
@@ -27,7 +28,7 @@ const FeaturedArticle = ({ title, description, link, image, time }) => {
 				/>
 			</Link>
 			<Link href={link} target={'_blank'}>
-				<h2 className='capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 text-dark dark:text-light'>
+				<h2 className='capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 text-dark dark:text-light xs:text-base '>
 					{title}
 				</h2>
 			</Link>
@@ -65,7 +66,7 @@ const MovingImg = ({ title, image, link }) => {
 			<FramerImage
 				src={image}
 				alt={title}
-				className='z-10 w-96 h-auto hidden absolute rounded-lg'
+				className='z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden'
 				ref={imgRef}
 				style={{ x, y }}
 				initial={{ opacity: 0 }}
@@ -81,18 +82,19 @@ const MovingImg = ({ title, image, link }) => {
 const Article = ({ title, link, image, date }) => {
 	return (
 		<motion.li
-			className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark text-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light border-r-4 border-b-4 cursor-pointer'
+			className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark text-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light border-r-4 border-b-4 cursor-pointer sm:flex-col'
 			initial={{ y: 200 }}
 			whileInView={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
 			viewport={{ once: true }}
 		>
 			<MovingImg title={title} image={image} link={link} />
-			<span className='text-primary dark:text-primaryDark font-semibold pl-4'>{date}</span>
+			<span className='text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm'>{date}</span>
 		</motion.li>
 	);
 };
 
 const articles = () => {
+	
 	return (
 		<>
 			<Head>
@@ -100,12 +102,16 @@ const articles = () => {
 				<meta name='description' content="Suyash Mishra's articles" />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
+			<TransitionEffect />
 			<main className='w-full bm-16 flex flex-col items-center justify-center overflow-hidden'>
 				<Layout className='pt-16'>
-					<AnimatedText text='Words Can Change The World!' className='mb-16 ' />
-					<ul className='grid grid-cols-2 gap-16'>
+					<AnimatedText
+						text='Words Can Change The World!'
+						className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
+					/>
+					<ul className='grid grid-cols-2 gap-16 lg:gap-8 md:gap-y-16 md:grid-cols-1'>
 						<FeaturedArticle
-							title='Build A Custom Pagination Component In Reactjs From Scratch'
+							title='Build A Custom Pagination Component In ReactJS From Scratch'
 							description='Follow this step-by-step guide to integrate Pagination component in your ReactJS project.'
 							link='https://medium.com/geekculture/build-a-custom-pagination-component-in-reactjs-from-scratch-6b3b1c2c1f3b'
 							image={article1}
