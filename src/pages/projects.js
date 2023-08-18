@@ -136,12 +136,12 @@ const projects = () => {
 		<>
 			<Head>
 				<title>Suyash Mishra | Projects Page</title>
-				<meta name='description' content='Suyash&apos;s Project Work' />
+				<meta name='description' content="Suyash's Project Work" />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<TransitionEffect />
-			<main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light '>
+			<main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light sm:pr-2'>
 				<Layout className='pt-16'>
 					<AnimatedText
 						text='Imagination Trumps Knowledge! '

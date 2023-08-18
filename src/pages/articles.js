@@ -103,7 +103,7 @@ const articles = () => {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
 			<TransitionEffect />
-			<main className='w-full bm-16 flex flex-col items-center justify-center overflow-hidden'>
+			<main className='w-full bm-16 flex flex-col items-center justify-center overflow-hidden sm:pr-2'>
 				<Layout className='pt-16'>
 					<AnimatedText
 						text='Words Can Change The World!'

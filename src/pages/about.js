@@ -43,7 +43,7 @@ const about = () => {
 				<meta name='description' content='about page for suyash mishra' />
 			</Head>
 			<TransitionEffect />
-			<main className='flex w-full flex-col items-center justify-center dark:text-light  '>
+			<main className='flex w-full flex-col items-center justify-center dark:text-light sm:pr-2 '>
 				<Layout className='pt-16'>
 					<AnimatedText
 						text='Passion Fuels Purpose!'
@@ -77,7 +77,7 @@ const about = () => {
 							</p>
 						</div>
 						<div className='col-span-3 relative h-max rounded-2xl  border-2 border-solid border-dark bg-light p-8 dark:bg-dark/75 dark:border-light xl:col-span-4 md:order-1 md:col-span-8'>
-							<div className='absolute left-0 top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-tl-2xl rounded-[2rem] bg-dark dark:bg-light ' />
+							<div className='absolute left-0 top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-tl-2xl rounded-[2rem] bg-dark dark:bg-light sm:rounded-2xl rounded-br-[1rem] ' />
 							<Image
 								src={profilePic}
 								alt='Suyash Mishra'
