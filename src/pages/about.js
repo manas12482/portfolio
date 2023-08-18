@@ -47,7 +47,7 @@ const about = () => {
 						text='Passion Fuels Purpose!'
 						className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8'
 					/>
-					<div className='grid w-full grid-cols-8 gap-16 sm:gap-8 sm:pl-[2vw] sm:pr-[4vw]'>
+					<div className='grid w-full grid-cols-8 gap-16 sm:gap-8 '>
 						<div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
 							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 md:text-center'>
 								Crafting Digital Excellence: Suyash&apos;s Developer Journey
@@ -75,7 +75,7 @@ const about = () => {
 							</p>
 						</div>
 						<div className='col-span-3 relative h-max rounded-2xl  border-2 border-solid border-dark bg-light p-8 dark:bg-dark/75 dark:border-light xl:col-span-4 md:order-1 md:col-span-8'>
-							<div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-tl-2xl rounded-[2rem] bg-dark dark:bg-light ' />
+							<div className='absolute left-0 top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-tl-2xl rounded-[2rem] bg-dark dark:bg-light ' />
 							<Image
 								src={profilePic}
 								alt='Suyash Mishra'
