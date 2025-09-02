@@ -46,43 +46,37 @@ const Education = () => {
 		offset: ['start end', 'center start'],
 	});
 	return (
-		<div className='my-32'>
-			<h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
-				Education
-			</h2>
-			<div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full '>
-				<motion.div
-					style={{ scaleY: scrollYProgress }}
-					className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'
-				/>
+  <div className='my-32'>
+    <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
+      Education
+    </h2>
+    <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full '>
+      <motion.div
+        style={{ scaleY: scrollYProgress }}
+        className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'
+      />
 
-				<ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
-					<Details
-						type='Intermediate'
-						time='2022'
-						place='NLKVMIC Kanpur, Uttar Pradesh'
-						info={`Subjects: Physics, Chemistry, Mathematics, Hindi, Computer Science. Percentage: 89.6% Board: UP Board`}
-						// certificate={{link:'/',text:'See Here'}}
-					/>
+      <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
+        <Details
+          type='Bachelor of Technology, Electronics and Communication Engineering'
+          time='July 2022 – July 2026'
+          place='Indian Institute of Information Technology (IIIT) Manipur'
+          info={`GPA: 8.17/10.00. Coursework: Software Development Life Cycle (SDLC), Data Structures & Algorithms, Operating Systems, Computer Networks, Database Management Systems (DBMS), Object-Oriented Programming (OOP), Web Technologies (MERN).`}
+        />
 
-					<Details
-						type='Bachelor of Technology, Computer Science'
-						time='2023 - Present'
-						place='Indian Institute of Information Technology, Manipur'
-						info='Relevant courses including Data Structures and Algorithms, Computer Systems Engineering, Artificial Intelligence, Natural Language Processing, Computer Communications etc.'
-					/>
-					<Details
-						type='Online CourseWorks'
-						time='2022-Present'
-						place='Udemy Coursera and other platforms'
-						info={`Harvard's CS50x, Full-Stack Web Development, Object-Oriented Programming (OOP) with Java, Algorithms and Data Structures`}
-						// certificate={{link:'/',text:'See Here'}}
-					/>
-				</ul>
-			</div>
-			<div className='w-full h-[10vh]' />
-		</div>
-	);
+        <Details
+          type='Higher Secondary (Physics, Chemistry, Mathematics)'
+          time='April 2019 – April 2021'
+          place='Rai Birendar College'
+          info={`Percent: 82%`}
+        />
+      </ul>
+    </div>
+    <div className='w-full h-[10vh]' />
+  </div>
+);
+
+
 };
 
 export default Education;

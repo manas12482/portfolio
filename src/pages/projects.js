@@ -6,7 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GithubIcon } from '@/components/icons';
 import { motion } from 'framer-motion';
-import project1 from '../../public/images/projects/portfolio-cover-image.png';
+import wanderlustImg from '../../public/images/projects/wanderlust-cover.png';
+import portfolioImg from '../../public/images/projects/portfolio-cover-image.png';
+
 import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
@@ -133,56 +135,64 @@ const Project = ({ title, type, image, link, githubLink }) => {
 
 const projects = () => {
 	return (
-		<>
-			<Head>
-				<title>Suyash Mishra | Projects Page</title>
-				<meta name='description' content="Suyash's Project Work" />
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-			<TransitionEffect />
-			<main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light sm:pr-2'>
-				<Layout className='pt-16'>
-					<AnimatedText
-						text='Imagination Trumps Knowledge! '
-						className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
-					/>
-					<div className='grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
-						<div className='col-span-12'>
-							<FeaturedProject
-								title='React Portfolio Website'
-								type='Featured Project'
-								description='A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.'
-								link='https://mishrasuyash.vercel.app/'
-								githubLink='https://github.com/mishra-suyash/portfolio-nextjs'
-								image={project1}
-							/>
-						</div>
-						<div className='col-span-6 sm:col-span-12'>
-							<Project
-								title='React Portfolio Website'
-								type='Featured Project'
-								description='A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.'
-								link='https://mishrasuyash.vercel.app/'
-								githubLink='https://github.com/mishra-suyash/portfolio-nextjs'
-								image={project1}
-							/>
-						</div>
-						<div className='col-span-6 sm:col-span-12'>
-							<Project
-								title='React Portfolio Website'
-								type='Featured Project'
-								description='A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.'
-								link='https://mishrasuyash.vercel.app/'
-								githubLink='https://github.com/mishra-suyash/portfolio-nextjs'
-								image={project1}
-							/>
-						</div>
-					</div>
-				</Layout>
-			</main>
-		</>
-	);
+  <>
+    <Head>
+      <title>Manas Kumar | Projects Page</title>
+      <meta name='description' content="Manas Kumar's Project Work" />
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <link rel='icon' href='/favicon.ico' />
+    </Head>
+    <TransitionEffect />
+    <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light sm:pr-2'>
+      <Layout className='pt-16'>
+        <AnimatedText
+          text='Building Ideas into Reality!'
+          className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
+        />
+
+        <div className='grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
+
+          {/* Featured Project: Wanderlust */}
+          <div className='col-span-12'>
+            <FeaturedProject
+              title='Wanderlust - Travel Listing Web App'
+              type='Featured Project'
+              description='A responsive, full-stack travel rental platform built with React.js, Node.js, Express, and MongoDB. Features include property CRUD, booking management, authentication (JWT), and interactive maps. Deployed on Render with positive user feedback.'
+              link='https://github.com/manas12482/Wanderlust.git'
+              githubLink='https://github.com/manas12482/Wanderlust.git'
+              image={wanderlustImg} // replace with actual project image import
+            />
+          </div>
+
+          {/* Portfolio Website */}
+          <div className='col-span-6 sm:col-span-12'>
+            <Project
+              title='Personal Portfolio Website'
+              type='Web Project'
+              description='A modern, animated personal portfolio built with Next.js, React, and Framer Motion. Features smooth page transitions, responsive design, and a unique UI with dark mode support.'
+              link='https://manas-portfolio.vercel.app/' // replace with actual live link
+              githubLink='https://github.com/manas12482/portfolio-nextjs' // replace with your repo link
+              image={portfolioImg} // replace with actual portfolio screenshot
+            />
+          </div>
+
+          {/* Extra project slot (optional future projects) */}
+          {/* <div className='col-span-6 sm:col-span-12'>
+            <Project
+              title='Another Project'
+              type='Web Project'
+              description='Description of another project.'
+              link='#'
+              githubLink='#'
+              image={placeholderImg}
+            />
+          </div> */}
+        </div>
+      </Layout>
+    </main>
+  </>
+);
+
 };
 
 export default projects;

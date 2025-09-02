@@ -9,7 +9,7 @@ const Footer = () => {
 				<span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
 				<div className='flex items-center lg:py-2'>
 					A Website by <span className='text-primary dark:text-primaryDark mx-1'>&#9825;</span>
-					<Link href='/' className='underline underline-offset-2'>Suyash Mishra</Link>
+					<Link href='/' className='underline underline-offset-2'>Manas Kr. Singh</Link>
 				</div>
 				<Link href='/' target={'_blank'} className='underline underline-offset-2'>Say Hello</Link>
 			</Layout>
