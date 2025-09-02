@@ -1,2 +1,2 @@
-# Portfolio Website - Suyash Mishra
+# Portfolio Website - Manas Kumar Singh
 
